@@ -21,10 +21,11 @@ function Sidebar() {
       <SidebarOption Icon={LibraryMusicIcon} title="Your Library"/>
       <strong className='sidebar__title'>PLAYLISTS</strong>
       <hr/>
-      
-      {playlists?.items?.map(playlist => (
-      <SidebarOption title={playlist.name}/>
-      )
+      {console.log('playlists',playlists)}
+      {playlists?.items.map(playlist =>{
+        console.log('playlist', playlist)
+        return  <SidebarOption title={playlist.name}/>
+      }
       )}
       
         </div>
