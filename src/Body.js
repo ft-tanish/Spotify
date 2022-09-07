@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Body.css";
 import { useDataLayerValue } from './DataLayer';
 import Header from './Header';
@@ -8,7 +8,7 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import SongRow from './SongRow';
 
 function Body({ spotify }) {
-    const [{ discover_weekly }, dispatch] = useDataLayerValue();
+    const [{ discover_weekly }] = useDataLayerValue();
     console.log('hhhhhhhhhhh', discover_weekly)
   return (
     discover_weekly && <div className='body'>
